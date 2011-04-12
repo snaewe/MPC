@@ -6,7 +6,8 @@
   "HTML Tidy for Linux (vers 1 September 2005), see www.w3.org">
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
   <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="GENERATOR" content="Adobe FrameMaker 7.0/HTML Export Filter">
+  <meta name="id" content=
+  "$Id$">
   <link rel="STYLESHEET" href="MakeProjectCreator.css" charset="ISO-8859-1"
   type="text/css">
 
@@ -52,8 +53,8 @@
         is simple and easy to use and maintain. These and other features will
         be discussed in detail in the following sections. A complete example
         of the use of MPC is shown in the <a href=
-        "MakeProjectCreator.html#Example%20MPC%20File" class="XRef">Example
-        MPC File</a> section.</li>
+        "MakeProjectCreator.html#ExampleMPCFile" class="XRef">Example MPC
+        File</a> section.</li>
       </ul>
     </div>
 
@@ -214,6 +215,29 @@
 
               <tr>
                 <td rowspan="1" colspan="1">
+                  <p class="Tbl-Body"><em class="TableCode">
+                      <a href="CDT6.html">cdt6</a></em></p>
+                </td>
+
+                <td rowspan="1" colspan="1">
+                  <p class="Tbl-Body">Eclipse CDT 6 (for Eclipse "Galileo" 3.5)
+                </p></td>
+              </tr>
+
+              <tr>
+                <td rowspan="1" colspan="1">
+                  <p class="Tbl-Body"><em class="TableCode">
+                      <a href="CDT6.html"><!--CDT6.html describes cdt7 as well
+                                            -->cdt7</a></em></p>
+                </td>
+
+                <td rowspan="1" colspan="1">
+                  <p class="Tbl-Body">Eclipse CDT 7 (for Eclipse "Helios" 3.6)
+                </p></td>
+              </tr>
+
+              <tr>
+                <td rowspan="1" colspan="1">
                   <p class="Tbl-Body"><em class="TableCode">em3</em></p>
                 </td>
 
@@ -279,6 +303,17 @@
 
               <tr>
                 <td rowspan="1" colspan="1">
+                  <p class="TblCode"><em class="TableCode">
+                      <a href="RpmSpec.html">rpmspec</a></em></p>
+                </td>
+
+                <td rowspan="1" colspan="1">
+                  <p class="Tbl-Body">RPM packaging .spec files.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td rowspan="1" colspan="1">
                   <p class="TblCode"><em class="TableCode">sle</em></p>
                 </td>
 
@@ -330,7 +365,7 @@
 
               <tr>
                 <td rowspan="1" colspan="1">
-                  <p class="TblCode">vc9</p>
+                  <p class="TblCode"><em class="TableCode">vc9</em></p>
                 </td>
 
                 <td rowspan="1" colspan="1">
@@ -340,7 +375,7 @@
 
               <tr>
                 <td rowspan="1" colspan="1">
-                  <p class="TblCode">vc10</p>
+                  <p class="TblCode"><em class="TableCode">vc10</em></p>
                 </td>
 
                 <td rowspan="1" colspan="1">
@@ -350,11 +385,23 @@
 
               <tr>
                 <td rowspan="1" colspan="1">
-                  <p class="TblCode">wb26</p>
+                  <p class="TblCode"><em class="TableCode"><a href="WB26.html">
+                        wb26</a></em></p>
                 </td>
 
                 <td rowspan="1" colspan="1">
                   <p class="Tbl-Body">Wind River Workbench 2.6.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td rowspan="1" colspan="1">
+                  <p class="TblCode"><em class="TableCode"><a href="WB30.html">
+                        wb30</a></em></p>
+                </td>
+
+                <td rowspan="1" colspan="1">
+                  <p class="Tbl-Body">Wind River Workbench 3.0.</p>
                 </td>
               </tr>
 
@@ -410,7 +457,7 @@
 
                 <td rowspan="1" colspan="1">
                   <p class="Tbl-Body">This option allows the user to force
-                  any project to inherit from a specified base project. This
+                  every project to inherit from a specified base project. This
                   option can be used multiple times to force multiple
                   inheritance upon a project.</p>
                 </td>
@@ -475,9 +522,8 @@
                   override feature values specified in the <em class=
                   "Code">global.features</em> file located in the <em class=
                   "Code">config</em> directory. Feature files are described
-                  in the <a href=
-                  "MakeProjectCreator.html#The%20Feature%20File" class=
-                  "XRef">Feature File</a> section.</p>
+                  in the <a href="MakeProjectCreator.html#TheFeatureFile"
+                  class="XRef">Feature File</a> section.</p>
                 </td>
               </tr>
 
@@ -490,7 +536,11 @@
                 <td rowspan="1" colspan="1">
                   <p class="Tbl-Body">Specifies the feature list to set
                   before processing. This is a comma separated list and
-                  should contain no spaces.</p>
+                  should contain no spaces. The -features option can be
+                  used multiple times on the same command line, the
+                  effect is the same as if the parameters had been
+                  specified with a single -features options, with the
+                  parameters joined by commas.</p>
                 </td>
               </tr>
 
@@ -597,7 +647,9 @@
                 <td rowspan="1" colspan="1">
                   <p class="Tbl-Body">This option specifies that all
                   generated project files will be placed in a mirrored
-                  directory structure.</p>
+                  directory structure. If any project within the
+                  workspace is referenced via a full path, use of this
+                  option is likely to cause problems.</p>
                 </td>
               </tr>
 
@@ -872,11 +924,12 @@
 
           <ul>
             <li class="BodyNoLead">Some of the options in <a href=
-            "MakeProjectCreator.html#84033" class="XRef">Command Line
-            Options</a> require an expanded explanation. You will find more
-            information on the <em class="Code">-relative</em>, <em class=
-            "Code">-ti</em>, <em class="Code">-value_project</em> and
-            <em class="Code">-value_template</em> options below.</li>
+            "MakeProjectCreator.html#Command%20Line%20Options" class=
+            "XRef">Command Line Options</a> require an expanded explanation.
+            You will find more information on the <em class=
+            "Code">-relative</em>, <em class="Code">-ti</em>, <em class=
+            "Code">-value_project</em> and <em class=
+            "Code">-value_template</em> options below.</li>
           </ul>
 
           <div>
@@ -942,6 +995,8 @@
           </div>
 
           <div>
+            <a name="Additional -ti information"></a>
+
             <h6 class="Head5">The -ti Option.</h6>
 
             <ul>
@@ -987,6 +1042,8 @@
           </div>
 
           <div>
+            <a name="Additional -value_project information"></a>
+
             <h6 class="Head5">The -value_project Option.</h6>
 
             <ul>
@@ -1013,6 +1070,8 @@
           </div>
 
           <div>
+            <a name="Additional -value_template information"></a>
+
             <h6 class="Head5">The -value_template Option.</h6>
 
             <ul>
@@ -1058,9 +1117,9 @@
           <li class="BodyNoLead">This configuration file can be used to
           specify alternate locations for the MPC Configuration File
           (discussed below). If a <em class="Code">base.cfg</em> is found
-          underneath the <em class="Code">config</em> directory where MPC is
-          executed, it will be read to determine the location of MPC.cfg
-          based on the directory in which MPC was started.</li>
+          underneath the <em class="Code">config</em> directory in the MPC
+          root directory, it will be read to determine the location of
+          MPC.cfg based on the directory in which MPC was started.</li>
 
           <li class="Body">For example, if <em class=
           "Code">$MPC_ROOT/mwc.pl</em> is run under <em class=
@@ -1083,7 +1142,16 @@
 
           <li class="Body">You may reference environment variables, accessed
           via the dollar sign (e.g., <em class="Code">$NAME</em>), on either
-          side of the equals sign.</li>
+          side of the equals sign. In either this file or the MPC
+          Configuration File (see below), an alternate form of environment
+          variable reference may be used for variables which are not expected
+          to be defined in all scenarios.  These variables use the syntax
+          <em class="Code">$?NAME</em> instead of <em class="Code">$NAME</em>.
+          With this syntax, if the environment variable
+          <em class="Code">NAME</em> is not defined, no error or warning is
+          printed by MPC, and the substring starting with
+          <em class="Code">$?NAME</em> until the next whitespace is expanded
+          to the empty string.</li>
         </ul>
 
         <ul>
@@ -1254,6 +1322,11 @@
           By default, the ghs type assumes that it is for Windows. Set this
           environment variable prior to running MPC if this is not the
           case.</li>
+
+          <li class="Body">The <em class="Code">MPC_USE_WIN_COMMANDS</em>
+          environment variable causes the Windows related pseudo template
+          variables to be used regardless of the type of project being
+          generated.</li>
         </ul>
       </div>
     </div>
@@ -1375,6 +1448,22 @@
 
               <p class="Code">&nbsp;&nbsp;}</p>
 
+              <p class="Code">&nbsp;</p>
+
+              <p class="Code">&nbsp;&nbsp;exclude(prop:microsoft) {</p>
+
+              <p class="Code">&nbsp;&nbsp;&nbsp;&nbsp;non_microsoft</p>
+
+              <p class="Code">&nbsp;&nbsp;}</p>
+
+              <p class="Code">&nbsp;</p>
+
+              <p class="Code">&nbsp;&nbsp;specific(rpmspec) {</p>
+
+              <p class="Code">&nbsp;&nbsp;&nbsp;&nbsp;rpm_version = 1.0</p>
+
+              <p class="Code">&nbsp;&nbsp;}</p>
+
               <p class="Code">}</p>
 
               <p class="Code">&nbsp;</p>
@@ -1393,13 +1482,16 @@
             This information would then be included in each workspace that
             inherits from it.</li>
 
-            <li class="Body">The lines between the curly braces contain
-            assignments, mpc files, directories, other workspace files or
-            exclusion sections. The mpc files listed will be included in the
-            workspace. If a directory is listed within the workspace, the
-            workspace creator will recursively traverse that directory and
-            use any mpc files that are found. If a workspace file is listed
-            it will be aggregated into the main workspace.</li>
+            <li class="Body">The lines between the curly braces
+            contain assignments, mpc files, directories, other
+            workspace files or exclusion sections.  For each listed item,
+            <ul>
+              <li>an mpc file will be included in the workspace</li>
+            
+              <li>a directory recursively traversed and any mpc files
+            found will be included</li>
+              <li><a name="AggregatedWorkspace"></a>a workspace file will be aggregated into the main workspace.</li>
+            </ul>
 
             <li class="Body">A workspace can have assignments interspersed
             within the directories and mpc files. These assignments modify
@@ -1433,6 +1525,20 @@
             <em class="Code">implicit</em> can be useful when you want to
             define specific workspaces, but the MPC defaults are sufficient
             for the directories involved within the workspace.</li>
+
+            <li class="Body"><a name="workspaceSpecific"></a>Workspaces
+            support a <em class="Code">specific</em> clause
+            conceptually and syntactically similar to <a
+            href="#projectSpecific">the project <em
+            class="Code">specific</em> clause.</a>  Any variables
+            assigned within the clause are only available to
+            workspaces, not to projects.   Two sorts of assignments are
+            possible: first are assignments to the keywords
+            <em class="Code">cmdline</em> and <em class="Code">implicit</em>
+            and the second are type-specific variables.  Consult the
+            documentation for the type for details on type-specific variables.
+            Keyword assignments impact the entire workspace, not just the
+            <em class="Code">specific</em> scope.</li> 
 
             <li class="Body">Scoped assignments are assignments that are
             associated with specific mpc files or directories listed with the
@@ -1488,10 +1594,12 @@
             directories and mpc files from being processed. These excluded
             directories and mpc files will be skipped when generating project
             files and workspaces. The <em class="Code">exclude</em> keyword
-            accepts project types within the parentheses (as above), which
-            will cause the workspace creator to only exclude the listing for
-            particular types. If no types are provided, exclusion will take
-            place for all project types.</li>
+            accepts project types as well as properties (see <a href=
+            "MakeProjectCreator.html#properties" class="XRef">Properties</a>)
+            within the parentheses (as above), which will cause the workspace
+            creator to only exclude the listing for particular types. If no
+            types are provided, exclusion will take place for all project
+            types.</li>
 
             <li class="Body">The <em class="Code">associate</em> scope
             associates a name with one or more directories. This does not add
@@ -1620,6 +1728,12 @@
                     <td rowspan="1" colspan="1">
                       <p class="Tbl-Body">Specifies that this project must be
                       built after 1 or more project names listed.</p>
+                      <p class="Tbl-Body">An extended syntax is available
+                      in order to associate name-value pairs with a
+                      dependency: <em class="Code">&lt;project
+                      name[:name=value]&gt;</em><br>
+                      These name-value pairs may be used in the creation
+                      of the dependencies of the project.</p>
                     </td>
                   </tr>
 
@@ -1649,6 +1763,21 @@
                       targets. Any files included in the projects will be
                       provided by custom component lists defined through the
                       use of <em class="Code">Define_Custom</em>.</p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body"><em class=
+                      "TableCode">dependent_upon</em></p>
+                    </td>
+
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body">This keyword can only be used
+                      as a header component scoped setting (ie. inside
+                      the scope of Header_Files).  It determines which
+                      file the header file is dependent upon for vc8,
+                      and vc9 only.</p>
                     </td>
                   </tr>
 
@@ -2073,6 +2202,25 @@
               <li class="BodyNoLead">Assignments can also use the <em class=
               "Code">+=</em> and <em class="Code">-=</em> operators to add
               and subtract values from keyword values.</li>
+             
+              <li class="Body">Assignments can be bracketed by curly braces 
+              so they can span multiple lines. The opening curly brace must 
+              be the last thing on the same line as the operator and the closing 
+              brace must be on its own line (but can have leading white space).  
+              Optionally, \n, \s, or \ns can be included after the operator.  These
+              indicate that new lines should be retained (\n) and leading white space
+              should be retained (\s).</li>
+
+              <li style="list-style: none">
+                <p class="Code">&nbsp;</p>
+                <p class="Code">specific(rpmspec) {</p>
+                <p class="Code">&nbsp;rpm_description = \ns {</p>
+                <p class="Code">This description</p>
+                <p class="Code">spans multiple lines.</p>
+                <p class="Code">&nbsp;}</p>
+                <p class="Code">}</p>
+                <p class="Code">&nbsp;</p>
+              </li>
 
               <li class="Body">If a <em class="Code">sharedname</em> is
               specified in the mpc file and <em class="Code">staticname</em>
@@ -2108,6 +2256,8 @@
           </div>
 
           <div>
+            <a name="16907"></a>
+
             <h6 class="Head5">Components</h6>
 
             <ul>
@@ -2248,6 +2398,8 @@
               within named blocks.</li>
 
               <li style="list-style: none">
+                <a name="MPC grouping example"></a>
+
                 <p class="Code">&nbsp;</p>
 
                 <p class="Code">Source_Files(MACRO_NAME) {</p>
@@ -2372,7 +2524,7 @@
           </div>
 
           <div>
-            <h6 class="Head5">Specific Clause</h6>
+            <h6 class="Head5"><a name="projectSpecific">Specific Clause</a></h6>
 
             <ul>
               <li class="BodyNoLead">The <em class="Code">specific</em>
@@ -2414,8 +2566,13 @@
               (see <a href="MakeProjectCreator.html#Command%20Line%20Options"
               class="XRef">Command Line Options</a>).</li>
 
+              <a name="properties">
               <li class="Body">The following table shows which properties
-              apply to which project types.</li>
+              apply to which project types. The <em class="Code">static</em>
+              property (not represented in the table) is set if the -static
+              option is supplied when processing the project files.
+              Additionally, a property that corresponds to the  language
+              will be set (e.g., cplusplus, csharp, java, vb).</li>
 
               <li class="Body">
                 <h6 class="NumberedTableTitle"><a name=
@@ -2882,6 +3039,8 @@
           </div>
 
           <div>
+            <a name="Custom Types and Build Rules"></a>
+
             <h6 class="Head5">Custom Types and Build Rules</h6>
 
             <ul>
@@ -2947,11 +3106,19 @@
               <em class="Code">MOC_Files</em> can be used to specify the
               input files for this new file type.</li>
 
+              <li class="Body">Define_Custom definitions may use single
+              inheritance.  This is useful for creating aliased names:
+              <p class="Code">Define_Custom(QtMOC) : MOC {</p>
+              <p class="Code">}</p>
+              </li>
+
               <li class="Body">The following table contains the keywords that
               can be used within the scope of <em class=
               "Code">Define_Custom</em>.</li>
 
               <li style="list-style: none">
+                <a name="32899"></a>
+
                 <h6 class="NumberedTableTitle">Define_Custom Keywords</h6>
 
                 <table border="1" summary="Define_Custom Keywords">
@@ -3036,6 +3203,25 @@
                       <p class="Tbl-Body">If this is given a value, then a
                       dependency upon that value will be given to all of the
                       generated files. The default for this is unset and no
+                      dependency will be generated.</p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body"><em class=
+                      "TableCode">dependent_libs</em></p>
+                    </td>
+
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body">If this is given a value, then a dependency upon that
+                      library value will be given to all of the generated files.
+                      The format for this entry should be the basename for the
+                      library (no library prefix, postfix, or extension)
+                      preceded by any relative or absolute path to the library.
+                      The typical use for this would be so that a project is
+                      rebuilt when a library needs to be rebuilt for its
+                      dependent executable. The default for this is unset and no
                       dependency will be generated.</p>
                     </td>
                   </tr>
@@ -3760,8 +3946,8 @@
               keywords that can be used within the custom file type component
               lists: <em class="Code">command</em>, <em class=
               "Code">commandflags</em>, <em class="Code">dependent</em>,
-              <em class="Code">gendir</em>, <em class=
-              "Code">postcommand</em>, and <em class=
+              <em class="Code">dependent_libs</em>, <em class="Code">gendir</em>,
+              <em class="Code">postcommand</em>, and <em class=
               "Code">recurse</em>.</li>
 
               <li class="Body">The <em class="Code">recurse</em> keyword
@@ -3769,7 +3955,8 @@
               class="XRef">Assignment Keywords</a>.</li>
 
               <li class="Body">The <em class="Code">command</em>, <em class=
-              "Code">commandflags</em>, <em class="Code">dependent</em> and
+              "Code">commandflags</em>, <em class="Code">dependent</em>,
+              <em class="Code">dependent_libs</em> and
               <em class="Code">postcommand</em> keywords can be used to
               augment or override the value defined in the <em class=
               "Code">Define_Custom</em> section.</li>
@@ -4431,6 +4618,18 @@
                     <tr>
                       <td rowspan="1" colspan="1">
                         <p class="TblCode"><em class=
+                        "TableCode">&lt;%pathsep%&gt;</em></p>
+                      </td>
+
+                      <td rowspan="1" colspan="1">
+                        <p class="Tbl-Body">A platform non-specific path
+                        separator (; or :).</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td rowspan="1" colspan="1">
+                        <p class="TblCode"><em class=
                         "TableCode">&lt;%or%&gt;</em></p>
                       </td>
 
@@ -4449,6 +4648,18 @@
 
                       <td rowspan="1" colspan="1">
                         <p class="Tbl-Body">Returns either win32 or unix.</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td rowspan="1" colspan="1">
+                        <p class="TblCode"><em class=
+                        "TableCode">&lt;%prj_type%&gt;</em></p>
+                      </td>
+
+                      <td rowspan="1" colspan="1">
+                        <p class="Tbl-Body">The project type as supplied
+                        by the -type command line option.</p>
                       </td>
                     </tr>
 
@@ -4513,6 +4724,51 @@
                         variable setting.</p>
                       </td>
                     </tr>
+
+                    <tr>
+                      <td rowspan="1" colspan="2">
+                        <p class="TblCode">The following variables will
+                        be set to the known extension for Windows based
+                        project types and empty on non-Windows based
+                        project types.</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td rowspan="1" colspan="1">
+                        <p class="TblCode"><em class=
+                        "TableCode">&lt;%bat%&gt;</em></p>
+                      </td>
+
+                      <td rowspan="1" colspan="1">
+                        <p class="Tbl-Body">The extension for batch
+                        files.</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td rowspan="1" colspan="1">
+                        <p class="TblCode"><em class=
+                        "TableCode">&lt;%cmd%&gt;</em></p>
+                      </td>
+
+                      <td rowspan="1" colspan="1">
+                        <p class="Tbl-Body">The extension for command
+                        files.</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td rowspan="1" colspan="1">
+                        <p class="TblCode"><em class=
+                        "TableCode">&lt;%exe%&gt;</em></p>
+                      </td>
+
+                      <td rowspan="1" colspan="1">
+                        <p class="Tbl-Body">The extension for executable
+                        files.</p>
+                      </td>
+                    </tr>
                   </table>
                 </li>
               </ul>
@@ -4521,6 +4777,8 @@
         </div>
 
         <div>
+          <a name="TheFeatureFile" id="TheFeatureFile"></a>
+
           <h5 class="Head4">The Feature File</h5>
 
           <ul>
@@ -4864,6 +5122,8 @@
         </div>
 
         <div>
+          <a name="ExampleMPCFile" id="ExampleMPCFile"></a>
+
           <h5 class="Head4">Example MPC File</h5>
 
           <ul>
@@ -5183,11 +5443,11 @@
               <p class="Code">&nbsp;</p>
             </li>
 
-            <li class="Body">A <em class="Code">foreach</em> statement can
-            also appear on a single line or can span multiple lines. As
-            described below in the keywords section, the <em class=
-            "Code">foreach</em> statement evaluates the variable in a
-            space-separated list context.</li>
+            <li class="Body"><a name="foreach syntax"></a> A <em class=
+            "Code">foreach</em> statement can also appear on a single line or
+            can span multiple lines. As described below in the keywords
+            section, the <em class="Code">foreach</em> statement evaluates
+            the variable in a space-separated list context.</li>
 
             <li class="Body">There are a couple of ways to write a <em class=
             "Code">foreach</em> loop. The first and preferred way is to name
@@ -5241,6 +5501,8 @@
             appear in template files.</li>
 
             <li style="list-style: none">
+              <a name="38037"></a>
+
               <h6 class="NumberedTableTitle">Template File Keywords</h6>
 
               <table border="1" summary="Template File Keywords">
@@ -5315,6 +5577,19 @@
                     <p class="Tbl-Body">This function returns true if the
                     variable value (first parameter) contains the regular
                     expression (second parameter).</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td rowspan="1" colspan="1">
+                    <p class="Tbl-Body"><em class=
+                    "TableCode">deref</em></p>
+                  </td>
+
+                  <td rowspan="1" colspan="1">
+                    <p class="Tbl-Body">Dereference the variable passed as
+                    a parameter, treating its value as another variable
+                    name and returning that variable's value.</p>
                   </td>
                 </tr>
 
@@ -5404,8 +5679,8 @@
 
                   <td rowspan="1" colspan="1">
                     <p class="Tbl-Body">This is similar to eval in perl. The
-                    template code passed to this function will be evaluated
-                    within the context of the current template.</p>
+                    template variable passed to this function will be
+                    evaluated within the context of the current template.</p>
                   </td>
                 </tr>
 
@@ -5634,15 +5909,21 @@
 
                   <td rowspan="1" colspan="1">
                     <p class="Tbl-Body">This function will remove a file in a
-                    component list. It requires two parameters. The first
-                    parameter is a component name(e.g., Source_Files) and the
-                    second parameter is a project or template variable name.
-                    The third and fourth optional parameters allow you to
-                    alter the project or template variable value in order to
-                    remove files that do not match the value exactly. The
-                    third parameter is a regular expression and the fourth
-                    parameter is the value with which to replace the regular
-                    expression match.</p>
+                    component list. It requires three parameters. The first
+                    parameter is a component name (e.g., Source_Files), the
+                    second parameter is a regular expression pattern and
+                    the third parameter is a project or template variable
+                    name. The fourth and optional parameter allows you to
+                    alter the project or template variable value by
+                    removing the end matching portion.  If the value of
+                    the project or template variable (i.e., parameter
+                    three) after being modified by parameter four and
+                    having the regular expression pattern (i.e.,
+                    parameter two) appended to it matches any value
+                    within the compent list (named by parameter one), it
+                    will be removed from that component list and passed
+                    back.
+                    any </p>
                   </td>
                 </tr>
 
@@ -5671,8 +5952,22 @@
                     Currently, the only function name supported is "escape".
                     The third parameter specifies a string on which the
                     function will operate. Any template text that matches the
-                    string parameter will be transformed by the function
-                    parameter. A scope is then ended by passing "leave".</p>
+                    string parameter while within this scope will be
+                    transformed by the function parameter. A scope is then
+                    ended by passing "leave".</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td rowspan="1" colspan="1">
+                    <p class="Tbl-Body"><em class="TableCode">set</em></p>
+                  </td>
+
+                  <td rowspan="1" colspan="1">
+                    <p class="Tbl-Body">This function is used to set or
+                    create a template variable.  This function takes two
+                    parameters; the first is the template variable name
+                    and the second is the variable value.</p>
                   </td>
                 </tr>
 
@@ -5711,6 +6006,22 @@
                     portion of a variable value with something that can be
                     used as a relative path. The current working directory is
                     removed and ".." is replaced with "dotdot".</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td rowspan="1" colspan="1">
+                    <p class="Tbl-Body"><em class="TableCode">translate_vars</em></p>
+                  </td>
+
+                  <td rowspan="1" colspan="1">
+                    <p class="Tbl-Body">The first parameter to this function
+                    is the name of a variable.  The second, optional,
+                    parameter is the operating system for which the
+                    project is being generated (e.g., linux, solaris,
+                    win32, etc.)  It replaces $(...) found within the
+                    value of the variable with the equivalent environment
+                    variable reference based on the operating system.</p>
                   </td>
                 </tr>
 
@@ -6050,6 +6361,8 @@
           </ul>
 
           <div>
+            <a name="Custom Types"></a>
+
             <h6 class="Head5">Custom Types</h6>
 
             <ul>
@@ -6228,6 +6541,112 @@
 
                 <p class="Code">&nbsp;</p>
               </li>
+
+              <li class="Body">Certain project types don't support the same
+              input file used by multiple custom types (current examples of
+              this are vc10, cdt6, and cdt7). To accomodate these types, MPC
+              has a capability called "combined custom".  With this capability
+              enabled in the specific ProjectCreator, MPC will "fold together"
+              the multiple custom steps so that the target tool (Visual Studio
+              or Eclipse CDT) sees it as a single custom step that happens to
+              run two or more commands.  When "combined custom" is enabled,
+              the template needs to be written for it by checking if
+              <em class="Code">custom_type-&gt;input_file-&gt;commands</em> is
+              non-empty.  If it isn't empty, the values in it can be iterated
+              over with a <em class="Code">&lt;%foreach%&gt;</em>.  During that
+              iteration, the following values can be obtained by the template.
+              Each one would appear in the template preceeded by
+              <em class="Code">custom_type-&gt;input_file-&gt;</em></li>
+
+              <li style="list-style: none">
+                <h6 class="NumberedTableTitle">Custom Type Fields for Combined
+                  Custom</h6>
+                <table border="1"
+                       summary="Custom Type Fields for Combined Custom">
+                  <tr>
+                    <th rowspan="1" colspan="1">
+                      <p class="Tbl-Heading">Value</p>
+                    </th>
+
+                    <th rowspan="1" colspan="1">
+                      <p class="Tbl-Heading">Description</p>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body"><em class=
+                      "TableCode">command</em></p>
+                    </td>
+
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body">The effective command, taking into
+                      account the <em class="TableCode">flag_overrides</em>.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body"><em class=
+                      "TableCode">command-&gt;outopt</em></p>
+                    </td>
+
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body">The <em class=
+                      "TableCode">output_option</em> for this particular
+                        command, taking into account the
+                        <em class="TableCode">flag_overrides</em>.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body"><em class=
+                      "TableCode">command-&gt;outfile</em></p>
+                    </td>
+
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body">The first output file for this
+                        particular command (for use with
+                        <em class="TableCode">outopt</em>).
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body"><em class=
+                      "TableCode">command-&gt;flags</em></p>
+                    </td>
+
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body">The <em class=
+                      "TableCode">commandflags</em> for this particular
+                        command, taking into account the
+                        <em class="TableCode">flag_overrides</em>.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body"><em class=
+                      "TableCode">command-&gt;gdir</em></p>
+                    </td>
+
+                    <td rowspan="1" colspan="1">
+                      <p class="Tbl-Body">The <em class=
+                      "TableCode">gendir</em> for this particular
+                        command.
+                      </p>
+                    </td>
+                  </tr>
+
+                </table>
+              </li>
+
             </ul>
           </div>
 
@@ -6295,9 +6714,9 @@
               variable cannot be named as stated <a href=
               "MakeProjectCreator.html#foreach%20syntax" class=
               "XRef">previously</a>. The following example involves source
-              files, but any of the components listed in <a href=
-              "MakeProjectCreator.html#16907" class="XRef">the mpc and mpb
-              section</a> can be used.</li>
+              files, but any of the <a href="MakeProjectCreator.html#16907"
+              class="XRef">components</a> listed in the mpc and mpb section
+              can be used.</li>
 
               <li style="list-style: none">
                 <p class="Code">&nbsp;</p>
@@ -6661,7 +7080,7 @@
               <p class="Code">// Section 13 - BIN DIRECTORY</p>
 
               <p class="Code">
-              &lt;%if(install)%&gt;&lt;%install%&gt;&lt;%else%&gt;.&lt;%endif%&gt;</p>
+              &lt;%if(exeout)%&gt;&lt;%exeout%&gt;&lt;%else%&gt;.&lt;%endif%&gt;</p>
 
               <p class="Code">&nbsp;</p>
 
